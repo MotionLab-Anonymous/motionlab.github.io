@@ -1,6 +1,6 @@
 # MotionLab
 
-This is the repository that project page code for the [MotionLab]([https://nerfies.github.io](https://motionlab-anonymous.github.io/motionlab.github.io/)).
+This is the repository that project page code for the [MotionLab](https://nerfies.github.io](https://motionlab-anonymous.github.io/motionlab.github.io/).
 
 If you find MotionLab useful for your work please cite:
 ```
