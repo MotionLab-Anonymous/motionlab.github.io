@@ -3,10 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+        content="MotionLab">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+  <title>TSTMotion: Training-free Scene-aware Text-to-motion Generation</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -32,7 +31,7 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -42,7 +41,9 @@
 </head>
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
+
+
+<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
       <span aria-hidden="true"></span>
@@ -80,7 +81,7 @@
     </div>
 
   </div>
-</nav>
+</nav> -->
 
 
 <section class="hero">
@@ -88,11 +89,11 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
+          <h1 class="title is-1 publication-title">TSTMotion: Training-free Scene-aware Text-to-motion Generation</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
-            <span class="author-block">
+              Anonymous Authors </span>
+            <!-- <span class="author-block">
               <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
             <span class="author-block">
               <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
@@ -108,18 +109,18 @@
             </span>
             <span class="author-block">
               <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
-            </span>
+            </span> -->
           </div>
 
-          <div class="is-size-5 publication-authors">
+          <!-- <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>University of Washington,</span>
             <span class="author-block"><sup>2</sup>Google Research</span>
-          </div>
+          </div> -->
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link. -->
-              <span class="link-block">
+              
+<!--               <span class="link-block">
                 <a href="https://arxiv.org/pdf/2011.12948"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -128,6 +129,7 @@
                   <span>Paper</span>
                 </a>
               </span>
+              
               <span class="link-block">
                 <a href="https://arxiv.org/abs/2011.12948"
                    class="external-link button is-normal is-rounded is-dark">
@@ -137,7 +139,7 @@
                   <span>arXiv</span>
                 </a>
               </span>
-              <!-- Video Link. -->
+              
               <span class="link-block">
                 <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
                    class="external-link button is-normal is-rounded is-dark">
@@ -146,10 +148,10 @@
                   </span>
                   <span>Video</span>
                 </a>
-              </span>
-              <!-- Code Link. -->
+              </span> -->
+              
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
+                <a href="https://github.com/TSTMotion/TSTMotion"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -157,17 +159,17 @@
                   <span>Code</span>
                   </a>
               </span>
-              <!-- Dataset Link. -->
-              <span class="link-block">
+              
+<!--               <span class="link-block">
                 <a href="https://github.com/google/nerfies/releases/tag/0.1"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
                   </span>
                   <span>Data</span>
-                  </a>
+                  </a> -->
+                
             </div>
-
           </div>
         </div>
       </div>
@@ -175,273 +177,239 @@
   </div>
 </section>
 
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
-      </h2>
-    </div>
-  </div>
-</section>
 
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="section">
+<!-- <section class="section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
-          </p>
+         Text-to-motion generation has recently garnered significant research interest, primarily focusing on generating human motion sequences in blank backgrounds. However, human motions commonly occur within diverse 3D scenes, which has prompted exploration into scene-aware text-to-motion generation methods. Yet, despite notable progress, existing scene-aware methods often rely on large-scale ground-truth motion sequences in diverse 3D scenes, which poses practical challenges due to the expensive cost. To mitigate this challenge, we are the first to propose a Training-free Scene-aware Text-to-Motion framework, dubbed as TSTMotion, that efficiently empowers pre-trained blank-background motion generators with the scene-aware capability. Specifically, conditioned on the given 3D scene and text description, we adopt foundation models together to reason, predict and validate a scene-aware motion guidance. Then, the motion guidance is incorporated into the blank-background motion generators with two modifications, resulting in scene-aware text-driven motion sequences. Extensive experiments demonstrate the efficacy and generalizability of our proposed framework.
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
+  </div>
+</section> -->
 
-    <!-- Paper video. -->
+
+<!-- <section class="section">
+  <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <h2 class="title is-3">Method</h2>
+        <div class="content has-text-justified">
+          <img src="./static/images/Method.png">
+          An overview of our proposed training-free TSTMotion framework for the given text $d$ and 3D scene $S_{3D}$. At first, the Scene Compiler extracts the spatial auxiliary in the $S_{3D}$. Based on the spatial auxiliary, the Motion Planner incorporates the text description and well-designed prompt templates to infer the motion guidance $s[M_{mask}]$. Equipped with the $s[M_{mask}]$, the Aligned Motion Diffusion Model predicts initial scene-aware text-driven motion sequences $m$ with two training-free modifications. Finally, the Motion Checker is applied to iteratively refine and generate final $m$ to better align with the $d$ and $S_{3D}$.
         </div>
       </div>
     </div>
-    <!--/ Paper video. -->
   </div>
-</section>
+</section> -->
 
-
-<section class="section">
+  
+<!-- <section class="section">
   <div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Complete Algorithm of Aligend Motion Diffusion Model</h2>
+        <div class="content has-text-justified">
+          <center>
+            <img src="./static/images/AMDM.png">
+          </center> 
+          <br>By leveraging such algorithm, the scene-aware text-driven motion sequences is generated in a training-free manner.
         </div>
       </div>
     </div>
-    <!--/ Matting. -->
-
-    <!-- Animation. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
-
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
-        <div class="content has-text-justified">
-          <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
-          </p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
-        </div>
-        <br/>
-        <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
-        <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
-          </p>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Re-rendering. -->
-
-      </div>
-    </div>
-    <!--/ Animation. -->
-
-
-    <!-- Concurrent Work. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Concurrent Work. -->
-
   </div>
-</section>
+</section> -->
+    
 
 
-<section class="section" id="BibTeX">
+<!-- <section class="hero is-light is-small">
+  <div class="hero-body">
+    <center>
+      <h2 class="title is-3">Segment Results</h2>
+      <p>Directly from <a href="https://zheninghuang.github.io/OpenIns3D/">OpenIns3D</a></i></b></p>
+    </center>
+
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+
+        <div class="item item-s1">
+          <img id="gifImage" src="./static/seg3d/scannet/s1.gif" alt="GIF">
+        </div>
+
+        <div class="item item-s2">
+          <img id="gifImage" src="./static/seg3d/scannet/s2.gif" alt="GIF">
+        </div>
+
+        <div class="item item-s3">
+          <img id="gifImage" src="./static/seg3d/scannet/s3.gif" alt="GIF">
+        </div>
+
+        <div class="item item-s4">
+          <img id="gifImage" src="./static/seg3d/scannet/s4.gif" alt="GIF">
+        </div>
+
+        <div class="item item-s5">
+          <img id="gifImage" src="./static/seg3d/scannet/s5.gif" alt="GIF">
+        </div>
+
+        <div class="item item-s6">
+          <img id="gifImage" src="./static/seg3d/scannet/s6.gif" alt="GIF">
+        </div>
+
+        <div class="item item-s7">
+          <img id="gifImage" src="./static/seg3d/scannet/s7.gif" alt="GIF">
+        </div>
+
+        <div class="item item-s8">
+          <img id="gifImage" src="./static/seg3d/scannet/s8.gif" alt="GIF">
+        </div>
+
+        <div class="item item-s9">
+          <img id="gifImage" src="./static/seg3d/scannet/s9.gif" alt="GIF">
+        </div>
+
+        <div class="item item-s10">
+          <img id="gifImage" src="./static/seg3d/scannet/s10.gif" alt="GIF">
+        </div>
+
+        <div class="item item-s11">
+          <img id="gifImage" src="./static/seg3d/scannet/s11.gif" alt="GIF">
+        </div>
+
+        <div class="item item-s12">
+          <img id="gifImage" src="./static/seg3d/scannet/s12.gif" alt="GIF">
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+<!-- <section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Motion Guidance Results</h2>
+        <div class="content has-text-justified">
+          <img src="./static/images/Guidance.png">
+          Demonstration of the motion guidance output by the Motion Planner given different text prompts.
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+  
+
+<!-- <section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3">Scene-Aware Text-Driven Motion Results</h2>
+      <p></p>
+    </div>
+    <div class="columns is-centered">
+      <div class="column">
+
+        <p></p><p></p>
+        <div class="content">
+          <h3 style="text-align:center">Stand up from the couch</h3>
+          <video id="21" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/Stand_up_from_the_couch.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <p></p><p></p>
+        <div class="content">
+          <h3 style="text-align:center">Sit on the toilet</h3>
+          <video id="22" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/Sit_on_the_toilet.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        
+        <p></p><p></p>
+        <div class="content">
+          <h3 style="text-align:center">Balance on the table</h3>
+          <video id="1" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/Balance_on_the table.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        
+        <p></p><p></p>
+        <div class="content">
+          <h3 style="text-align:center">Box in front of the punching bag</h3>
+          <video id="2" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/Box_in_front_of the_punching_bag.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        
+        <p></p><p></p>
+        <div class="content">
+          <h3 style="text-align:center">Dance happiliy in front of the mirror</h3>
+          <video id="3" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/Dance_happiliy_in front_of_the_mirror.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        
+        <p></p><p></p>
+        <div class="content">
+          <h3 style="text-align:center">Do a handstand in front of the chair</h3>
+          <video id="4" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/Do_a_handstand_in_front_of_the_chair.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        
+        <p></p><p></p>
+        <div class="content">
+          <h3 style="text-align:center">Fly kick with his right leg on the door</h3>
+          <video id="5" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/Fly_kick_with_his_right_leg_on_the_door.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        
+        <p></p><p></p>
+        <div class="content">
+          <h3 style="text-align:center">Walk as a chicken towards the barn</h3>
+          <video id="9" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/Walk_as_a_chicken_towards_the_barn.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+          
+        <p></p><p></p>
+        <div class="content">
+          <h3 style="text-align:center">Walk in a counterclockwise circle near the campfire</h3>
+          <video id="10" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/Walk_in_a_counterclockwise_circle_near_the_campfire.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <p></p><p></p>
+        <div class="content">
+          <h3 style="text-align:center">Walk to the couch</h3>
+          <video id="10" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/Walk_to_the_couch.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        
+      </div>
+    </div>
+    <p></p>
+</section> -->
+
+
+<!-- <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{park2021nerfies,
@@ -451,19 +419,19 @@
   year      = {2021},
 }</code></pre>
   </div>
-</section>
+</section> -->
 
 
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
-      <a class="icon-link"
+      <!-- <a class="icon-link"
          href="./static/videos/nerfies_paper.pdf">
         <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+      </a> -->
+      <!-- <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
         <i class="fab fa-github"></i>
-      </a>
+      </a> -->
     </div>
     <div class="columns is-centered">
       <div class="column is-8">
