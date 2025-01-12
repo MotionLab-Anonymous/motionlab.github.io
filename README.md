@@ -1,4 +1,4 @@
-# MotionLab
+# MotionLab: Unified Human Motion Generation and Editing via the Motion-Condition-Motion Paradigm
 
 This is the repository that project page code for the [MotionLab](https://motionlab-anonymous.github.io/motionlab.github.io/).
 
