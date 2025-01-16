@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>MotionLab: Unified Human Motion Generation and Editing via the Motion-Condition-Motion Paradigm</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+
+  <style>.centered-title {text-align: center;}</style>
+
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">MotionLab: Unified Human Motion Generation and Editing via the Motion-Condition-Motion Paradigm</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                Anonymous Authors </span>
+              <!-- <span class="author-block">
+                <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
+              <span class="author-block">
+                <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
+              </span> -->
+            </div>
+  
+            <!-- <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>University of Washington,</span>
+              <span class="author-block"><sup>2</sup>Google Research</span>
+            </div> -->
+  
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                
+  <!--               <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2011.12948"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2011.12948"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                
+                <span class="link-block">
+                  <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span> -->
+                
+                <span class="link-block">
+                  <a href="https://github.com/MotionLab-Anonymous/MotionLab"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                    </a>
+                </span>
+                
+  <!--               <span class="link-block">
+                  <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="far fa-images"></i>
+                    </span>
+                    <span>Data</span>
+                    </a> -->
+                  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="200%">
+        <!-- Your video here -->
+        <source src="static/videos/banner_video.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        Demo Video of our Framework MotionLab.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h4 class="title is-3"><font size="6">Demo</font></h4>
+            <p></p> <p></p> <p></p>
+          </div>
+        </div>
+      </div>
+
+
+       <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/demo1.png" alt="error"/>
+      </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Human motion generation and editing are crucial components of computer vision. However, existing works in this field focus on separate solutions specialized for specific tasks, which can be inconvenient and inefficient for practical applications. Even though some efforts have attempted to unify motion-related tasks, they simply use different modalities as conditions to guide motion generation, thus lacking editing capabilities and failing to share knowledge between tasks. 
+            To address these limitations and provide a versatile, unified framework capable of handling both human motion generation and editing, we introduce a novel paradigm: Motion-Condition-Motion, which enables the unified formulation of diverse tasks with three concepts: source motion, condition, and target motion.
+            Based on this paradigm, we propose a unified framework, MotionLab, which incorporates rectified flows to learn the mapping from source motion to target motion, guided by the specified conditions.
+            In MotionLab, we introduce the Multi-Modal Rectified Flow Transformer to enhance conditional generation and editing without additional modules like ControlNet; Aligned Rotational Position Encoding to guarantee the time synchronization between source motion and target motion; Task Specified Instruction Modulation and Motion Curriculum Learning for effective multi-task learning and knowledge sharing between tasks.
+            Notably, Our MotionLab demonstrates promising generalization capabilities and inference efficiency across several benchmarks for human motion.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h4 class="title is-3"><font size="6">Method</font></h4>
+            <p></p> <p></p> <p></p>
+          </div>
+        </div>
+      </div>
+
+
+       <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/Method.png" alt="error"/>
+        <h2 class="subtitle has-text-centered">
+          Illustration of our Multi-Modal Rectified Flow Transformer (MM-RFT) and the detail of its’ blocks.
+        </h2>
+      </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+
+<!-- Image carousel -->
+<!-- <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          First image description.
+        </h2>
+      </div>
+      <div class="item">
+        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Second image description.
+        </h2>
+      </div>
+      <div class="item">
+        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+         Third image description.
+       </h2>
+     </div>
+     <div class="item">
+      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+        Fourth image description.
+      </h2>
+    </div>
+  </div>
+</div>
+</div>
+</section> -->
+<!-- End image carousel -->
+
+
+
+<!-- Youtube video -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Video Presentation</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+          <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- End youtube video -->
+
+
+<!-- Video carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h4 class="title is-3"><font size="6">Text-based Motion Generation</font></h4>
+            <p></p> <p></p> <p></p>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="./static/videos/quantitive/text gen/a man is doing jumping jacks.mp4"
+            type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+          doing jumping jacks.
+          </h2>
+        </div>
+
+
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="./static/videos/quantitive/text gen/person walks forwards and uses their right arm as support.mp4"
+            type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+            walks forwards and uses their right arm as support.
+          </h2>
+        </div>
+
+
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="./static/videos/quantitive/text gen/a figure does a dance where it waves its arms around then makes a large jump and then steps back to its original position.mp4"
+            type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+            does a dance where it waves its arms around then makes a large jump and then steps back to its original position.
+          </h2>
+        </div>
+
+
+    </div>
+  </div>
+</section>
+<!-- End video carousel -->
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h4 class="title is-3"><font size="6">Text-based Motion Editing</font></h4>
+            <p></p> <p></p> <p></p>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="./static/videos/quantitive/text edit/MAKE A WIDER TURN.mp4"
+            type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+          make a wider turn.
+          </h2>
+        </div>
+
+
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="./static/videos/quantitive/text edit/use the opposite leg.mp4"
+            type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+          use the opposite leg.
+          </h2>
+        </div>
+
+
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="./static/videos/quantitive/text edit/do a handstand and keep legs open.mp4"
+            type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+            do a handstand and keep legs open.
+          </h2>
+        </div>
+
+
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h4 class="title is-3"><font size="6">Trajectory-based Motion Generation</font></h4>
+            <p></p> <p></p> <p></p>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="./static/videos/quantitive/traj gen/walking forward and then bending down.mp4"
+            type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+          walking forward and then bending down.
+          </h2>
+        </div>
+
+
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="./static/videos/quantitive/traj gen/a person does a throwing motion with his right arm.mp4"
+            type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+          does a throwing motion with his right arm.
+          </h2>
+        </div>
+
+
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="./static/videos/quantitive/traj gen/a person takes deliberate steps, some much larger steps and some much smaller steps, to cross stepping stones.mp4"
+            type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+            takes deliberate steps, some much larger steps and some much smaller steps, to cross stepping stones.
+          </h2>
+        </div>
+
+
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h4 class="title is-3"><font size="6">Motion Style Transfer</font></h4>
+            <p></p> <p></p> <p></p>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="./static/videos/quantitive/style transfer/jump.mp4"
+            type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+          The left side is content motion, the right side is style motion, and the middle is the generated result.
+          </h2>
+        </div>
+
+
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="./static/videos/quantitive/style transfer/run.mp4"
+            type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+          The left side is content motion, the right side is style motion, and the middle is the generated result.
+          </h2>
+        </div>
+
+
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="./static/videos/quantitive/style transfer/walk.mp4"
+            type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+            The left side is content motion, the right side is style motion, and the middle is the generated result.
+          </h2>
+        </div>
+
+
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h4 class="title is-3"><font size="6">Ablation: Motion In-between</font></h4>
+            <p></p> <p></p> <p></p>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="./static/videos/ablation/inbetween/balance.mp4"
+            type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+          blance with the left leg and move the other leg. <p></p>
+          The beige motion uses a 1D learnable position encoding, while the purple motion uses an Aligned ROPE, and the gray motion is the pose given at the keyframe.
+          </h2>
+        </div>
+
+
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="./static/videos/ablation/inbetween/curveline.mp4"
+            type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+          walks in a curved line. <p></p>
+          The beige motion uses a 1D learnable position encoding, while the purple motion uses an Aligned ROPE, and the gray motion is the pose given at the keyframe.
+          </h2>
+        </div>
+
+
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="./static/videos/ablation/inbetween/sideway.mp4"
+            type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+          walks side ways but back and forth. <p></p>
+          The beige motion uses a 1D learnable position encoding, while the purple motion uses an Aligned ROPE, and the gray motion is the pose given at the keyframe.
+          </h2>
+        </div>
+
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Paper poster -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Poster</h2>
+
+      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
+          </iframe>
+        
+      </div>
+    </div>
+  </section> -->
+<!--End paper poster -->
+
+
+<!--BibTex citation -->
+  <!-- <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>BibTex Code Here</code></pre>
+    </div>
+</section> -->
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
