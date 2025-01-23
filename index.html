@@ -220,11 +220,11 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Human motion generation and editing are crucial components of computer vision. However, existing works in this field focus on separate solutions specialized for specific tasks, which can be inconvenient and inefficient for practical applications. Even though some efforts have attempted to unify motion-related tasks, they simply use different modalities as conditions to guide motion generation, thus lacking editing capabilities and failing to share knowledge between tasks. 
-            To address these limitations and provide a versatile, unified framework capable of handling both human motion generation and editing, we introduce a novel paradigm: Motion-Condition-Motion, which enables the unified formulation of diverse tasks with three concepts: source motion, condition, and target motion.
-            Based on this paradigm, we propose a unified framework, MotionLab, which incorporates rectified flows to learn the mapping from source motion to target motion, guided by the specified conditions.
-            In MotionLab, we introduce the Multi-Modal Rectified Flow Transformer to enhance conditional generation and editing without additional modules like ControlNet; Aligned Rotational Position Encoding to guarantee the time synchronization between source motion and target motion; Task Specified Instruction Modulation and Motion Curriculum Learning for effective multi-task learning and knowledge sharing between tasks.
-            Notably, Our MotionLab demonstrates promising generalization capabilities and inference efficiency across several benchmarks for human motion.
+Human motion generation and editing are key components of computer graphics and vision. However, current approaches in this field tend to offer isolated solutions tailored to specific tasks, which can be inefficient and impractical for real-world applications. While some efforts have aimed to unify motion-related tasks, these methods simply use different modalities as conditions to guide motion generation. Consequently, they lack editing capabilities, fine-grained control, and fail to facilitate knowledge sharing across tasks. 
+To address these limitations and provide a versatile, unified framework capable of handling both human motion generation and editing, we introduce a novel paradigm: Motion-Condition-Motion, which enables the unified formulation of diverse tasks with three concepts: source motion, condition, and target motion.
+Based on this paradigm, we propose a unified framework, MotionLab, which incorporates rectified flows to learn the mapping from source motion to target motion, guided by the specified conditions.
+In MotionLab, we introduce the 1) MotionFlow Transformer to enhance conditional generation and editing without task-specific modules; 2) Aligned Rotational Position Encoding to guarantee the time synchronization between source motion and target motion; 3) Task Specified Instruction Modulation; and 4) Motion Curriculum Learning for effective multi-task learning and knowledge sharing across tasks.
+Notably, our MotionLab demonstrates promising generalization capabilities and inference efficiency across multiple benchmarks for human motion.
           </p>
         </div>
       </div>
